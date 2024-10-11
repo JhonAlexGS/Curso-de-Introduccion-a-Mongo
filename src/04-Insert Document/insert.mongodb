@@ -1,0 +1,11 @@
+use('Platzi_store')
+
+db.productos.insertOne({
+    name: "Product 1",
+    price: 1000
+})
+
+db.productos.insertOne({
+    name: "Product 1",
+    price: 100
+})

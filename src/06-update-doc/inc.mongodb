@@ -1,0 +1,13 @@
+use('Platzi_store')
+
+db.productos.updateOne(
+    //query
+    {_id:2},
+    // change => operatos
+    {
+        // Decimos cuanto queremos actualizar el producto
+        $inc:{
+            price: 300
+        }
+    }
+)
