@@ -1,0 +1,12 @@
+use('platzi_store')
+
+// Eliminar el que coincida primero con
+db.products.deleteOne({_id:1})
+
+// Eliminar todos los que coincidan con el precio de 100
+db.products.deleteMany({price: 100})
+
+
+// Eliminar toda la base de datos
+db.products.drop()
+

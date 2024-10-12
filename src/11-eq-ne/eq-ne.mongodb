@@ -1,0 +1,22 @@
+use('platzi_store')
+
+// db.inventory.find({qty:20})
+
+// // Using $eq
+// db.inventory.find({
+//     qty: {
+//         $eq: 20
+//     }
+// })
+
+// Cuando el atributo del subdocumento se llama item
+// db.inventory.find({
+//     "item.name": "ab"
+// })
+
+// Quiero que me busque todos los documentos que no sean iguales ($ne)
+db.inventory.find({
+    qty: {
+        $ne: 20
+    }
+})

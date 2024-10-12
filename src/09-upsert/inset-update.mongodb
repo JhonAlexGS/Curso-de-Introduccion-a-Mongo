@@ -1,0 +1,39 @@
+use("platzi_store")
+
+
+db.iot.insertOne({
+    sensor: "A001",
+    date: "2023-01-02"}).count()
+
+db.iot.insertOne({
+    sensor: "A001",
+    date: "2023-01-02",
+    readings: 1212
+});
+
+
+// Si no encuentra el documento a actualizar no hace nada
+
+// db.iot.updateOne({
+//     sensor: "A001",
+//     date: "2022-01-02",
+// }, {
+//     $push:{
+//         readings: [2323]
+//     }
+// })
+
+
+// Eliminar elementos de una lista
+
+// db.iot.updateOne({
+//     sensor: "A001",
+//     date: "2022-01-02",
+// }, {
+//     $pop:{
+//         // Si es 1 coje el último si es -1 coje el primero
+//         readings: 1
+//     }
+// })
+
+db.iot.find()
