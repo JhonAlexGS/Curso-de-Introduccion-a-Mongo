@@ -1,0 +1,25 @@
+use("platzi_store")
+
+// Remueve un elemento del array
+// db.inventories.updateOne({_id:4},{
+//     $pull:{
+//         tags:"headphone"
+//     }
+// })
+
+// Remueve muchos elementos del arrau
+// db.inventories.updateMany({},{
+//     $pull:{
+//         tags:"school"
+//     }
+// })
+
+// Remueve otros elementos del array
+db.inventories.updateMany({},{
+    $pull:{
+        $in: ["appliance", "school"]
+        // tags:"school"
+    }
+})
+
+db.inventories.find()

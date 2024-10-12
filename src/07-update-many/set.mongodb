@@ -3,16 +3,16 @@ use("sample_training")
 // db.zips.find({city:"CLEVELAND"}).count()
 
 
-// db.zips.updateMany(
-//     // query
-//     {city: "CLEVELAND"},
-//     // update - operators
-//     {
-//         $set:{
-//             myAttr: "Hola"
-//         }
-//     }
-// )
+db.zips.updateMany(
+    // query
+    {city: "CLEVELAND"},
+    // update - operators
+    {
+        $set:{
+            myAttr: "Hola"
+        }
+    }
+)
 
 
 // Rename: Cambiamos el nombre del atributo más no el contenido
